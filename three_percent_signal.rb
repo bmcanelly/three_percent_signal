@@ -18,7 +18,7 @@ class ThreePercentSignal < Thor
   def initialize(*args)
     super
     @balance = options[:starting_balance]
-    @additions = options[:quarterly_additions] / 2
+    @additions = options[:quarterly_additions] / 2 if options[:quarterly_additions]
   end
 
   def self.exit_on_failure?
