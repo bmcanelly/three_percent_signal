@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'thor', '~> 1.1'
+gem 'thor'
 
 group :lint do
-  gem 'rubocop', '= 1.8.1'
+  gem 'rubocop'
 end
