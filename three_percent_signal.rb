@@ -44,7 +44,7 @@ class ThreePercentSignal < Thor
       # A = P * (1 + r/n) ** (n * t)
       rate     = options[:rate].to_f
       @balance = 0.01 unless @balance.positive?
-      @balance = (@balance * (1 + rate/(options[:years] * 4)) ** ((options[:years] * 4) * options[:years])).round(2)
+      @balance = (@balance * ((1 + (rate / (options[:years] * 4)))**((options[:years] * 4) * options[:years]))).round(2)
     end
   end
 
