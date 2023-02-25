@@ -4,7 +4,7 @@ Calculate scenarios based on the Three Percent Signal by Jason Kelley
 
 ### Dependencies ###
 
-[Ruby 2.7.3](https://www.ruby-lang.org/en/news/2021/04/05/ruby-2-7-3-released/)
+[Ruby 3.1.3](https://www.ruby-lang.org/en/downloads/)
 
 Thor    (from ```bundle install```)
 
@@ -43,15 +43,15 @@ signal_line:    $13560.35
 sell:           10.28 shares
 
 
-# prediction
-# using the 'prediction' subcommand
+# quarterly_compounded_interest
+# using the 'quarterly_compounded_interest' subcommand
 
-ruby three_percent_signal.rb prediction \
-  --quarters 40 \
-  --quarterly_additions 3000 \
-  --starting_balance 12976
+ruby three_percent_signal.rb quarterly_compounded_interest \
+  --rate 0.045 \
+  --starting_balance 1000000 \
+  --years 2
 ---------------------------------------------------------
-ending_balance: 155430.1
+ending_balance: 1093898.39 
 
 
 ```
